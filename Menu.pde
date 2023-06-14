@@ -9,7 +9,7 @@ import ddf.minim.ugens.*;
 
 int tela =0 ;
 float angle = 0;
-
+float angle2 = 0;
 void setup() {
   size(800, 600,P3D);
   musica();
@@ -55,9 +55,40 @@ textFont(ArialBlack);
   image(B1,-100, -150);
   image(B2,-100,-90);
   image(B3,-100,-30);
-  //shape(rtg, 0, 0);
- // shape(rtg1, 0, 0);
-  //shape(rtg2, 0, 0);
+if(tela == 0 && mouseX>300 && mouseY >149 && mouseY<198 && mouseX<500){
+  pushMatrix();
+  translate(-140,-125);
+  fill(255,0,0);
+  //noStroke();
+  lights();
+  rotateY(angle2);
+  angle2 += 1;
+  sphere(25);
+  popMatrix();
+}
+if(tela == 0 && mouseX>300 && mouseY >209 && mouseY<258 && mouseX<500){
+   pushMatrix();
+  translate(-140,-65);
+  fill(255,0,0);
+  //noStroke();
+  lights();
+  rotateY(angle2);
+  angle2 += 1;
+  sphere(25);
+  popMatrix();
+}
+
+if(tela == 0 && mouseX>300 && mouseY >272 && mouseY<321 && mouseX<500){
+     pushMatrix();
+  translate(-140,-5);
+  fill(255,0,0);
+  //noStroke();
+  lights();
+  rotateY(angle2);
+  angle2 += 1;
+  sphere(25);
+  popMatrix();
+}
   
   pushMatrix();
   translate(370,270);
